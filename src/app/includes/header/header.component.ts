@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   navOpen = false;
-  rxjsDropdownOpen = false;
 
   constructor() { }
 
@@ -19,7 +18,4 @@ export class HeaderComponent implements OnInit {
     this.navOpen = !this.navOpen;
   }
 
-  onRxJsToggle() {
-    this.rxjsDropdownOpen = !this.rxjsDropdownOpen;
-  }
 }

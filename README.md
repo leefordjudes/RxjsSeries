@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
+Project Based on https://www.youtube.com/playlist?list=PLLhsXdvz0qjI68a8tLUUMyXmNhl608mcn 
+
 # Project Creation 
 
 ng new RxjsSeries --minimal=true --inlineStyle=false --inlineTemplate=false --routing=true --skipTests=true --style=scss --strict=false
@@ -17,8 +19,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ng g c includes/header
+ng g d shared/dropdown
+
 ng g c promise
 ng g c observable
+ng g c async-await
 
 ## Build
 
