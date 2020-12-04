@@ -12,13 +12,14 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="observable">Observable</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" (click)="onRxJsToggle()" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            RxJs
+        <li class="nav-item dropdown" appDropdown>
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            RxJs Concepts
           </a>
-          <div class="dropdown-menu" [class.show]="rxjsDropdownOpen" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
             <a class="dropdown-item" routerLink="promise">Promise</a>
             <a class="dropdown-item" routerLink="observable">Observable</a>
+            <a class="dropdown-item" routerLink="async-await">Async await</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>

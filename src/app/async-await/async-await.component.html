@@ -1,0 +1,39 @@
+<p>async keyword with function always return promise</p>
+<div class="mb-3">
+  <p>Enter promise time:</p>
+</div>
+<div class="mb-3">
+<input class="form-control col-md-2" type="number" #promiseTime>
+</div>
+<button class="btn btn-outline-primary" (click)="getAsyncData(promiseTime.value)">Get Async Data</button>
+<p *ngIf='promiseOne'>{{promiseOne}} milliseconds</p>
+
+<div class="container">
+  <div class="my-3">
+    <h2>Async / Await</h2>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <strong>Ex-01 : with Promise</strong>
+        <hr>
+        <button class="btn btn-primary" (click)="fetch1()">Buy Laptop</button>
+        <hr>
+        <div>{{ex1result}}</div>
+      </div>
+      <div class="col-md-4">
+        <strong>Ex-02 : with Async / Await</strong>
+        <hr>
+        <button class="btn btn-primary" (click)="fetch2()">Buy Laptop</button>
+        <hr>
+        <div>{{ex2result}}</div>
+      </div>
+      <div class="col-md-4">
+        <strong>Ex-03 : with Fetch Api</strong>
+        <hr>
+        <button class="btn btn-primary" (click)="fetch3()">Get Post</button>
+        <hr>
+        <div>{{ex3result}}</div>
+      </div>
+    </div>
+  </div>
+</div>
