@@ -12,4 +12,8 @@ export class DesignUtilityService {
     el.innerText = val;
     document.getElementById(containerId).appendChild(el);
   }
+
+  clearElement(containerId: string) {
+    document.getElementById(containerId).innerHTML='';
+  }
 }

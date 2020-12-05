@@ -1,0 +1,63 @@
+<div class="my-3">
+  <h2>of and from </h2>
+  <br>
+  <h5>Converts the arguments to an observable sequence.</h5>
+  <strong>Ex - 01 (of)</strong>
+  <button class="btn btn-outline-primary mx-5" (click)="readNames()">Read - of(...args) - Names</button>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Data :</strong> of('Aron','Bob','Canon')
+      </p>
+      <hr>
+      <p *ngIf="totalNames">Total Names: {{totalNames}}</p>
+      <ul id="elContainer1"></ul>
+    </div>
+    <div class="col-md-6">
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Data :</strong> of(&#123;a:'Aron',b:'Bob',c:'Canon'&#125;)
+      </p>
+      <hr>
+      <ul>
+        <li><strong>a: </strong>{{obsMsg.a}}</li>
+        <li><strong>b: </strong>{{obsMsg.b}}</li>
+        <li><strong>c: </strong>{{obsMsg.c}}</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <strong>Ex - 02 (from)</strong>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Array</strong>
+      <button class="btn btn-outline-primary mx-5" (click)="readFromNames()">Read - from([array]) - Names</button>
+      <hr>
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Data :</strong> from(['Aron','Bob','Canon'])
+      </p>
+      <p *ngIf="totalNames">Total Names: {{totalFromNames}}</p>
+      <ul id="elContainer2"></ul>
+    </div>
+
+    <div class="col-md-4">
+      <strong>Promise</strong>
+      <hr>
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Data :</strong> Promise to Observable conversion
+      </p>
+      <ul id="elContainer3"></ul>
+    </div>
+    
+    <div class="col-md-4">
+      <strong>String</strong>
+      <hr>
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Data :</strong> String to Observable conversion
+      </p>
+      <ul id="elContainer4"></ul>
+    </div>
+
+  </div>
+</div>

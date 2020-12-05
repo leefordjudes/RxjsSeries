@@ -11,6 +11,10 @@ ng new RxjsSeries --minimal=true --inlineStyle=false --inlineTemplate=false --ro
 npm install bootstrap
 npm install jquery
 npm install @popperjs/core
+npm install faker
+npm install @types/faker
+npm install lodash
+
 
 and modify angular.json
 
@@ -45,6 +49,8 @@ ng g c observable/list
 ng g c observable/from-event
 
 ng g s app-services/design-utility
+
+ng g c observable/interval
 
 
 ## Build

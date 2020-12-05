@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { fromEvent, Subscription } from 'rxjs';
 import { DesignUtilityService } from '../../app-services/design-utility.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { DesignUtilityService } from '../../app-services/design-utility.service'
   templateUrl: './from-event.component.html',
   styleUrls: ['./from-event.component.scss']
 })
-export class FromEventComponent implements OnInit, AfterViewInit {
+export class FromEventComponent implements OnInit, AfterViewInit, OnDestroy {
   flag=true;
+  eventSubscription: Subscription;
   constructor(private _designUtilityService: DesignUtilityService) { }
+
 
   @ViewChild('addBtn') addBtn:ElementRef;
 
@@ -17,7 +19,7 @@ export class FromEventComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     let count = 1;
-    fromEvent(this.addBtn.nativeElement, 'click').subscribe(res => {
+    this.eventSubscription = fromEvent(this.addBtn.nativeElement, 'click').subscribe(res => {
       const val = `Video ${count++}`;
       if (this.flag) {
         this._designUtilityService.addElement(val,'elContainer1');
@@ -28,11 +30,8 @@ export class FromEventComponent implements OnInit, AfterViewInit {
     });
   }
 
-  // addElement(val: string, containerId: string) {
-  //   let el = document.createElement('li');
-  //   el.innerText = val;
-  //   document.getElementById(containerId).appendChild(el);
-  // }
-
+  ngOnDestroy(): void {
+    this.eventSubscription.unsubscribe();
+  }
 
 }
