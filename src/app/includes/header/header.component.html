@@ -12,14 +12,17 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="observable">Observable</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/async-await">Async await</a>
+        </li>
         <li class="nav-item dropdown" appDropdown>
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             RxJs Operators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="promise">Promise</a>
-            <a class="dropdown-item" routerLink="observable">Observable</a>
-            <a class="dropdown-item" routerLink="async-await">Async await</a>
+            <a class="dropdown-item" [routerLink]="['/observable','fromEvent']">fromEvent</a>
+            <a class="dropdown-item" [routerLink]="['/observable','interval']">interval & timer</a>
+            <a class="dropdown-item" [routerLink]="['/observable','of-from']">of & from</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>

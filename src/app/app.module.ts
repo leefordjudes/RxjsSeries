@@ -11,6 +11,8 @@ import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ListComponent } from './observable/list/list.component';
 import { FromEventComponent } from './observable/from-event/from-event.component';
+import { IntervalComponent } from './observable/interval/interval.component';
+import { OfFromComponent } from './observable/of-from/of-from.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FromEventComponent } from './observable/from-event/from-event.component
     AsyncAwaitComponent,
     DropdownDirective,
     ListComponent,
-    FromEventComponent
+    FromEventComponent,
+    IntervalComponent,
+    OfFromComponent
   ],
   imports: [
     BrowserModule,
