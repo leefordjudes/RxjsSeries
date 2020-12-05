@@ -9,6 +9,22 @@ Project Based on https://www.youtube.com/playlist?list=PLLhsXdvz0qjI68a8tLUUMyXm
 ng new RxjsSeries --minimal=true --inlineStyle=false --inlineTemplate=false --routing=true --skipTests=true --style=scss --strict=false
 
 npm install bootstrap
+npm install jquery
+npm install @popperjs/core
+
+and modify angular.json
+
+as like the below
+
+"styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/styles.scss"
+          ],
+"scripts": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/@popperjs/core/dist/umd/popper.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+           ]
 
 ## Development server
 
@@ -24,6 +40,12 @@ ng g d shared/dropdown
 ng g c promise
 ng g c observable
 ng g c async-await
+
+ng g c observable/list
+ng g c observable/from-event
+
+ng g s app-services/design-utility
+
 
 ## Build
 

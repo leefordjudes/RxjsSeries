@@ -9,6 +9,8 @@ import { ObservableComponent } from './observable/observable.component';
 import { HomeComponent } from './includes/home/home.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ListComponent } from './observable/list/list.component';
+import { FromEventComponent } from './observable/from-event/from-event.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
     ObservableComponent,
     HomeComponent,
     AsyncAwaitComponent,
-    DropdownDirective
+    DropdownDirective,
+    ListComponent,
+    FromEventComponent
   ],
   imports: [
     BrowserModule,
