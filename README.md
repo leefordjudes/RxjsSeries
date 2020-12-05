@@ -15,6 +15,24 @@ npm install faker
 npm install @types/faker
 npm install lodash
 
+faker & lodash is a commonJS, so you need to configure it in 
+
+angular.json
+
+https://angular.io/guide/build#configuring-commonjs-dependencies
+
+"build": {
+  "builder": "@angular-devkit/build-angular:browser",
+  "options": {
+     "allowedCommonJsDependencies": [
+        "lodash",
+        "faker"
+     ]
+     ...
+   }
+   ...
+},
+
 
 and modify angular.json
 
