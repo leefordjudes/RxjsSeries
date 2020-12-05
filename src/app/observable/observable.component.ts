@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./observable.component.scss']
 })
 export class ObservableComponent implements OnInit {
-
+  code = `.subscribe()`;
   constructor() { }
 
   ngOnInit(): void {
