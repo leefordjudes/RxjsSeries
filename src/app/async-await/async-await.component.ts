@@ -17,9 +17,13 @@ export class AsyncAwaitComponent implements OnInit {
     hardDisk: '2 TB', 
     color: 'Black',
   };
+  buyLaptop2;
   constructor() { }
 
   ngOnInit(): void {
+    this.buyLaptop2 = new Promise((resolve, reject) => {
+      setTimeout(() => {resolve(this.dell)}, 3000);
+    });
   }
 
 
@@ -60,14 +64,10 @@ export class AsyncAwaitComponent implements OnInit {
   }
   
   async fetch2() {
+    console.log('fetch2');
     this.ex2result = 'Fetching Data...';
-    let buyLaptop2 = new Promise((resolve, reject) => {
-      setTimeout(() => {resolve(this.dell)}, 3000);
-    });
-    
-    const data = await buyLaptop2;
-    this.ex2result = JSON.stringify(data);
-    
+    const data = await this.buyLaptop2;
+    this.ex2result = JSON.stringify(data);    
   }
 
   async fetch3() {
@@ -81,7 +81,7 @@ export class AsyncAwaitComponent implements OnInit {
     //   this.ex3result = JSON.stringify(res[0].title);
     // });
 
-    // Type 1 - using await
+    // Type 2 - using await
     const result = await getPost;
     this.ex3result = JSON.stringify(result[0].title);
   }
