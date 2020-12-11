@@ -69,6 +69,8 @@ ng g c observable/from-event
 ng g s app-services/design-utility
 
 ng g c observable/interval
+ng g c observable/of-from
+ng g c observable/to-array
 
 
 ## Build
