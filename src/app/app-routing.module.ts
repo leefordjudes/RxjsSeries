@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { HomeComponent } from './includes/home/home.component';
+import { CustomComponent } from './observable/custom/custom.component';
+import { MapComponent } from './observable/map/map.component';
 import { FromEventComponent } from './observable/from-event/from-event.component';
 import { IntervalComponent } from './observable/interval/interval.component';
 import { ListComponent } from './observable/list/list.component';
@@ -21,6 +23,8 @@ const routes: Routes = [
       {path: 'interval', component: IntervalComponent},
       {path: 'of-from', component: OfFromComponent},
       {path: 'to-array', component: ToArrayComponent},
+      {path: 'custom', component: CustomComponent},
+      {path: 'map', component: MapComponent},
     ],
   },
   {path:'async-await',component: AsyncAwaitComponent},

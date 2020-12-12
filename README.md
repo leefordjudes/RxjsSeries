@@ -71,6 +71,10 @@ ng g s app-services/design-utility
 ng g c observable/interval
 ng g c observable/of-from
 ng g c observable/to-array
+ng g c observable/custom
+ng g c observable/map
+
+time: 17
 
 
 ## Build
