@@ -1,0 +1,36 @@
+<div class="my-3">
+  <h2>Custom Observable</h2>
+  <br>
+  <div class="row" style="height: 12rem;">
+    <div class="col-md-6">
+      <strong>Ex - 01 (Manual)</strong>
+      <hr>
+      <ul [ngClass]="customObs1Status == 'completed' ? 'completed' : customObs1Status == 'error' ? 'error' : ''"
+          class="techList" id="elContainer1"></ul>
+    </div>
+    <div class="col-md-6">
+      <strong>Ex - 02 (Custom Interval Observable)</strong>
+      <hr>
+      <ul [ngClass]="customObs2Status == 'completed' ? 'completed' : customObs2Status == 'error' ? 'error' : ''"
+          class="techList" id="elContainer2"></ul>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <strong>Ex - 03 (Random Names)</strong>
+      <br>
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Random Names :</strong> 'Aron','Bob','Canon', 'RxSeries', 'John', 'Alex', 'Jake'
+      </p>
+      <hr>
+      <p>Current Name: <strong>{{names}}</strong></p>
+      <span 
+        [ngClass]="randomNamesObsStatus === 'completed' ? 'badge-success' : randomNamesObsStatus === 'error' ? 'badge-danger' : 'badge-primary'"
+        class="badge">
+        {{randomNamesObsStatus === 'completed' ? 'Success' : randomNamesObsStatus === 'error' ? 'Error' : 'Running'}}
+      </span>
+    </div>
+  </div>
+</div>
