@@ -76,8 +76,8 @@ ng g c observable/map
 ng g c observable/pluck
 ng g c observable/filter
 ng g c observable/tap
+ng g c observable/take
 
-time: 17
 
 
 ## Build
