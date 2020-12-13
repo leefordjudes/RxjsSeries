@@ -59,14 +59,14 @@ export class OfFromComponent implements OnInit, OnDestroy {
     // });
     const obs4 = from(promise);
     obs4.subscribe((res: any) => {
-      console.log('from promise =>', res);
+      // console.log('from promise =>', res);
       this._designUtilityService.addElement(res, 'elContainer3');
     });
 
     // from - string
     const obs5 = from('String to Observable');
     obs5.subscribe((res: any) => {
-      console.log('from string =>', res);
+      // console.log('from string =>', res);
       this._designUtilityService.addElement(res, 'elContainer4');
     });
   }

@@ -28,28 +28,28 @@ export class TakeComponent implements OnInit, OnDestroy {
       take(10)
     );
 
-    source1.subscribe(res => {
-      this._du.addElement(res, 'elContainer1')
+    this.subs1 = source1.subscribe(res => {
+      this._du.addElement(res, 'elContainer1');
     });
 
     // Ex - 02 | TakeLast
-    source1.pipe(takeLast(5)).subscribe(res => {
-      this._du.addElement(res, 'elContainer2')
+    this.subs1 = source1.pipe(takeLast(5)).subscribe(res => {
+      this._du.addElement(res, 'elContainer2');
     });
 
     // Ex - 03 | TakeLast
-    source1.pipe(takeUntil(this.condition)).subscribe(res => {
-      this._du.addElement(res, 'elContainer3')
+    this.subs1 = source1.pipe(takeUntil(this.condition)).subscribe(res => {
+      this._du.addElement(res, 'elContainer3');
     });
 
     // Ex - 04 | TakeWhile
-    source1.pipe(takeWhile(x => x.length >= 8)).subscribe(res => {
-      this._du.addElement(res, 'elContainer4')
+    this.subs1 = source1.pipe(takeWhile(x => x.length >= 8)).subscribe(res => {
+      this._du.addElement(res, 'elContainer4');
     });
   }
 
   ngOnDestroy(): void {
-    this.subs1.unsubscribe();
+    this.subs1?.unsubscribe();
   }
 
 }
