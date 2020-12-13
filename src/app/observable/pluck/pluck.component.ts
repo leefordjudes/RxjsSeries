@@ -33,7 +33,7 @@ export class PluckComponent implements OnInit {
       pluck('name'),
       toArray()
     ).subscribe(res => {
-      console.log(res)
+      // console.log(res)
       this.data1 = res;
     });
 
@@ -42,7 +42,7 @@ export class PluckComponent implements OnInit {
       pluck('job', 'title'),
       toArray()
     ).subscribe(res => {
-      console.log(res)
+      // console.log(res)
       this.data2 = res;
     });
   }

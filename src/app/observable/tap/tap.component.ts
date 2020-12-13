@@ -23,7 +23,7 @@ export class TapComponent implements OnInit, OnDestroy {
     this.subs1 = source.pipe(
       tap(res => {
         if(res === 4) {
-          this.subs1.unsubscribe();
+          this.subs1?.unsubscribe();
         }
       }),
       map(res=>Arr[res])
@@ -35,9 +35,9 @@ export class TapComponent implements OnInit, OnDestroy {
     const colors = ['Red','Green','Blue', 'Yellow', 'Pink', 'Purple', 'Orange'];
     this.subs2 = source.pipe(
       tap(res => {
-        console.log('tap => '+res);
+        // console.log('tap => '+res);
         if(res === colors.length) {
-          this.subs2.unsubscribe();
+          this.subs2?.unsubscribe();
         }
       }),
       map(res=>colors[res])
@@ -48,8 +48,8 @@ export class TapComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subs1.unsubscribe();
-    this.subs2.unsubscribe();
+    this.subs1?.unsubscribe();
+    this.subs2?.unsubscribe();
   }
 
 }

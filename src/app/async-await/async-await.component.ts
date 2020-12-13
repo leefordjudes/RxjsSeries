@@ -30,7 +30,7 @@ export class AsyncAwaitComponent implements OnInit {
   getAsyncData(val: number) {
     if(!isNaN(val) && val > 0) {
       this.startTime = new Date();
-      console.log(`start time: ${this.startTime}`);
+      // console.log(`start time: ${this.startTime}`);
       this.getData(val)
         .then(data => {this.promiseOne = data;console.log(data)})
         .catch(err => {this.promiseOne = err;console.log(err)});
@@ -41,14 +41,14 @@ export class AsyncAwaitComponent implements OnInit {
     return await new Promise((resolve, reject) => {
       setTimeout(()=>{
         this.finishTime = new Date();
-        console.log(`finish time: ${this.finishTime}`);
+        // console.log(`finish time: ${this.finishTime}`);
         const totalTime = Math.round((this.finishTime - this.startTime)/1000);
         if (Math.floor(Math.random()*10) % 2 === 1) {
           resolve(`promise resolved, Total Time: ${totalTime}`);
         } else {
           reject(`promise rejected, Total Time: ${totalTime}`);
         }
-        console.log(`Total Time: ${totalTime}`);
+        // console.log(`Total Time: ${totalTime}`);
       },val*1000);
     });
   }
@@ -64,7 +64,7 @@ export class AsyncAwaitComponent implements OnInit {
   }
   
   async fetch2() {
-    console.log('fetch2');
+    // console.log('fetch2');
     this.ex2result = 'Fetching Data...';
     const data = await this.buyLaptop2;
     this.ex2result = JSON.stringify(data);    
