@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { PromiseComponent } from './promise/promise.component';
@@ -22,6 +23,7 @@ import { FilterComponent } from './observable/filter/filter.component';
 import { TapComponent } from './observable/tap/tap.component';
 import { TakeComponent } from './observable/take/take.component';
 import { RetryComponent } from './observable/retry/retry.component';
+import { DebouncetimeComponent } from './observable/debouncetime/debouncetime.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,14 @@ import { RetryComponent } from './observable/retry/retry.component';
     FilterComponent,
     TapComponent,
     TakeComponent,
-    RetryComponent
+    RetryComponent,
+    DebouncetimeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LoadingBarRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,9 @@
-<nav class="navbar navbar-light navbar-expand-md bg-light">
+<nav class="navbar navbar-light navbar-expand-lg bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Observable and Promises</a>
+    <a class="navbar-brand" href="#">
+      <img src="assets/rxjs-logo.png">
+      RxJS Series
+    </a>
     <button class="navbar-toggler" (click)="onNavToggle()" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,6 +34,7 @@
             <a class="dropdown-item" [routerLink]="['/observable','tap']">tap</a>
             <a class="dropdown-item" [routerLink]="['/observable','take']">take, takeLast,...</a>
             <a class="dropdown-item" [routerLink]="['/observable','retry']">retry, retryWhen,...</a>
+            <a class="dropdown-item" [routerLink]="['/observable','debouncetime']">DebounceTime, DistinctUntilChanged</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>

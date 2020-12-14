@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
-Project Based on https://www.youtube.com/playlist?list=PLLhsXdvz0qjI68a8tLUUMyXmNhl608mcn 
+Project Based on https://www.youtube.com/playlist?list=PLLhsXdvz0qjI68a8tLUUMyXmNhl608mcn
 
 # Project Creation 
 
@@ -14,6 +14,12 @@ npm install @popperjs/core
 npm install faker
 npm install @types/faker
 npm install lodash
+npm install @ngx-loading-bar/core --save
+npm install @ngx-loading-bar/router --save
+
+Reference:
+https://github.com/aitboudad/ngx-loading-bar
+https://github.com/aitboudad/ngx-loading-bar/blob/main/packages/router/README.md
 
 faker & lodash is a commonJS, so you need to configure it in 
 
@@ -77,6 +83,8 @@ ng g c observable/pluck
 ng g c observable/filter
 ng g c observable/tap
 ng g c observable/take
+ng g c observable/retry
+ng g c observable/debouncetime
 
 
 
