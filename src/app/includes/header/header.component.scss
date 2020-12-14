@@ -3,6 +3,12 @@
   transition: 0.5s ease;
 }
 
+.navbar-brand img {
+  height: 26px;
+  width: 26px;
+  vertical-align: top;
+}
+
 // .nav-item.dropdown.show,
 .collapse.navbar-collapse.show {
   transition: 10s ease;
