@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DesignUtilityService {
 
-  constructor() { }
+  private exclusiveSubject = new Subject<boolean>();
+  exclusive$ = this.exclusiveSubject.asObservable();
+
+  private userNameSubject = new BehaviorSubject<string>('Akai');
+  userName$ = this.userNameSubject.asObservable();
+
+  constructor() {}
 
   addElement(val: string, containerId: string) {
     let el:HTMLLIElement = document.createElement('li');
@@ -17,5 +24,12 @@ export class DesignUtilityService {
 
   clearElement(containerId: string) {
     document.getElementById(containerId).innerHTML='';
+  }
+
+  setExclusive(val: boolean) {
+    this.exclusiveSubject.next(val);
+  }
+  setUserName(val: string) {
+    this.userNameSubject.next(val);
   }
 }

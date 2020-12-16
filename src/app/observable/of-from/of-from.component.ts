@@ -15,6 +15,10 @@ export class OfFromComponent implements OnInit, OnDestroy {
   obs3: Observable<string[]>;
   obsMsg;
   obs1Subscription: Subscription;
+  obs2Subscription: Subscription;
+  obs3Subscription: Subscription;
+  obs4Subscription: Subscription;
+  obs5Subscription: Subscription;
   names = [];
   totalNames = 0;
   fromNames = [];
@@ -36,14 +40,14 @@ export class OfFromComponent implements OnInit, OnDestroy {
     });
 
     const obs2 = of({a:'Aron', b:'Bob', c:'Canon' })
-    obs2.subscribe(res =>{
+    this.obs2Subscription = obs2.subscribe(res =>{
       this.obsMsg = res;
     });
 
     // from - array
 
     this.obs3 = from(this.names);
-    this.obs3.subscribe((res: any) =>{
+    this.obs3Subscription = this.obs3.subscribe((res: any) =>{
       this._designUtilityService.addElement(res, 'elContainer2');
     });
 
@@ -58,14 +62,14 @@ export class OfFromComponent implements OnInit, OnDestroy {
     //   console.log(res);
     // });
     const obs4 = from(promise);
-    obs4.subscribe((res: any) => {
+    this.obs4Subscription = obs4.subscribe((res: any) => {
       // console.log('from promise =>', res);
       this._designUtilityService.addElement(res, 'elContainer3');
     });
 
     // from - string
     const obs5 = from('String to Observable');
-    obs5.subscribe((res: any) => {
+    this.obs5Subscription = obs5.subscribe((res: any) => {
       // console.log('from string =>', res);
       this._designUtilityService.addElement(res, 'elContainer4');
     });
@@ -92,13 +96,17 @@ export class OfFromComponent implements OnInit, OnDestroy {
     }
     this.totalFromNames = this.fromNames.length;
     this.obs3 = from(this.fromNames);
-    this.obs3.subscribe((res: any) => {
+    this.obs3Subscription = this.obs3.subscribe((res: any) => {
       this._designUtilityService.addElement(res, 'elContainer2');
     });
   }
 
   ngOnDestroy() {
     this.obs1Subscription?.unsubscribe();
+    this.obs2Subscription?.unsubscribe();
+    this.obs3Subscription?.unsubscribe();
+    this.obs4Subscription?.unsubscribe();
+    this.obs5Subscription?.unsubscribe();
   }
 
 }

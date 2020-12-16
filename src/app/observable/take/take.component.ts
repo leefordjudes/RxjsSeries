@@ -12,6 +12,9 @@ import { DesignUtilityService } from '../../app-services/design-utility.service'
 export class TakeComponent implements OnInit, OnDestroy {
 
   subs1: Subscription;
+  subs2: Subscription;
+  subs3: Subscription;
+  subs4: Subscription;
   constructor(private _du: DesignUtilityService) { }
   condition: Observable<any>;
   @ViewChild('addBtn', {static: true}) addBtn:ElementRef;
@@ -33,23 +36,26 @@ export class TakeComponent implements OnInit, OnDestroy {
     });
 
     // Ex - 02 | TakeLast
-    this.subs1 = source1.pipe(takeLast(5)).subscribe(res => {
+    this.subs2 = source1.pipe(takeLast(5)).subscribe(res => {
       this._du.addElement(res, 'elContainer2');
     });
 
     // Ex - 03 | TakeLast
-    this.subs1 = source1.pipe(takeUntil(this.condition)).subscribe(res => {
+    this.subs3 = source1.pipe(takeUntil(this.condition)).subscribe(res => {
       this._du.addElement(res, 'elContainer3');
     });
 
     // Ex - 04 | TakeWhile
-    this.subs1 = source1.pipe(takeWhile(x => x.length >= 8)).subscribe(res => {
+    this.subs4 = source1.pipe(takeWhile(x => x.length >= 8)).subscribe(res => {
       this._du.addElement(res, 'elContainer4');
     });
   }
 
   ngOnDestroy(): void {
     this.subs1?.unsubscribe();
+    this.subs2?.unsubscribe();
+    this.subs3?.unsubscribe();
+    this.subs4?.unsubscribe();
   }
 
 }
