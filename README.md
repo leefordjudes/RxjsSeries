@@ -85,6 +85,10 @@ ng g c observable/tap
 ng g c observable/take
 ng g c observable/retry
 ng g c observable/debouncetime
+ng g c observable/subject
+ng g c observable/subject/comp1
+ng g c observable/subject/comp2
+ng g c observable/subject/comp3
 
 
 
