@@ -3,6 +3,11 @@ import { from, of } from 'rxjs';
 import { map, mergeAll, mergeMap } from 'rxjs/operators';
 import { DesignUtilityService } from '../../app-services/design-utility.service';
 
+/*
+ref: difference between mergeMap, concatMap 
+https://medium.com/@luukgruijs/understanding-rxjs-map-mergemap-switchmap-and-concatmap-833fc1fb09ff#:~:text=Use%20mergeMap%20if%20you%20simply,order%20is%20important%20to%20you.
+*/
+
 @Component({
   selector: 'app-merge-map',
   templateUrl: './merge-map.component.html',
