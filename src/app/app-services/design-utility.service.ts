@@ -17,7 +17,7 @@ export class DesignUtilityService {
 
   constructor() {}
 
-  addElement(val: string, containerId: string) {
+  addElement(val: any, containerId: string) {
     let el:HTMLLIElement = document.createElement('li');
     el.innerText = val;
     if (el !== null) {
