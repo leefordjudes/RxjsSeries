@@ -93,8 +93,8 @@ ng g c observable/replay-subject
 ng g c observable/async-subject
 ng g c observable/concat
 ng g c observable/merge
-
-
+ng g c observable/merge-map
+ng g c observable/concat-map
 
 ## Build
 

@@ -22,7 +22,6 @@ export class MergeComponent implements OnInit, OnDestroy {
     
     const FinalObs = merge(sourceTech, sourceComedy, sourceNews);
     this.sub1 = FinalObs.subscribe(res => {
-      console.log(res);
       this._du.addElement(res, 'elContainer');
     });
   }
