@@ -90,6 +90,7 @@ ng g c observable/subject/comp1
 ng g c observable/subject/comp2
 ng g c observable/subject/comp3
 ng g c observable/replay-subject
+ng g c observable/async-subject
 
 
 
