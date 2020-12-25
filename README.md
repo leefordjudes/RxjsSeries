@@ -77,6 +77,7 @@ ng g c observable/list
 ng g c observable/from-event
 
 ng g s app-services/design-utility
+ng g s app-services/search
 
 ng g c observable/interval
 ng g c observable/of-from
@@ -101,6 +102,7 @@ ng g c observable/merge-map
 ng g c observable/concat-map
 ng g c observable/concat-map2
 ng g c observable/switchmap
+
 
 ## Build
 
