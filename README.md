@@ -102,6 +102,7 @@ ng g c observable/merge-map
 ng g c observable/concat-map
 ng g c observable/concat-map2
 ng g c observable/switchmap
+ng g c observable/exhaust-map
 
 
 ## Build
