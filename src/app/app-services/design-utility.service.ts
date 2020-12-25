@@ -25,6 +25,15 @@ export class DesignUtilityService {
     }
   }
 
+  addDivElement(val: any, containerId: string) {
+    let el = document.createElement('div');
+    el.setAttribute('class','item');
+    el.innerHTML = val;
+    if (el !== null) {
+      document.getElementById(containerId)?.prepend(el);
+    }
+  }
+
   clearElement(containerId: string) {
     document.getElementById(containerId).innerHTML='';
   }

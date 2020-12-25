@@ -21,6 +21,10 @@ Reference:
 https://github.com/aitboudad/ngx-loading-bar
 https://github.com/aitboudad/ngx-loading-bar/blob/main/packages/router/README.md
 
+icons from:
+https://www.stickpng.com/img/icons-logos-emojis/social-media-icons/circle-facebook-icon
+https://www.stickpng.com/img/icons-logos-emojis/social-media-icons/simple-twitter-logo-in-circle
+
 faker & lodash is a commonJS, so you need to configure it in 
 
 angular.json
@@ -95,6 +99,7 @@ ng g c observable/concat
 ng g c observable/merge
 ng g c observable/merge-map
 ng g c observable/concat-map
+ng g c observable/concat-map2
 
 ## Build
 
