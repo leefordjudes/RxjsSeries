@@ -100,5 +100,31 @@
      "title": "Sass Interpolation  | #{ }  | Sass Tutorial in Hindi (2019) [#8]",
      "description" : "In This Video You will Learn about Sass Interpolation  | #{ }  | Sass Tutorial in Hindi (2019) [#8]" 
    }
+ ],
+ "products":[
+   {
+     "id": 1,
+     "name": "Mobile",
+     "price": 5500,
+     "type": "mobile",
+     "description":"lorem ipsum",
+     "imgUrl":"https://placeimg.com/400/250/any"
+   },
+   {
+    "id": 2,
+    "name": "Laptop",
+    "price": 15000,
+    "type": "laptop",
+    "description":"lorem ipsum",
+    "imgUrl":"https://placeimg.com/400/250/any"
+  },
+  {
+    "id": 3,
+    "name": "Desktop",
+    "price": 25000,
+    "type": "desktop",
+    "description":"lorem ipsum",
+    "imgUrl":"https://placeimg.com/400/250/any"
+  }
  ]
 }
