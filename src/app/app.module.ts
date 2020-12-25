@@ -39,6 +39,7 @@ import { ConcatMap2Component } from './observable/concat-map2/concat-map2.compon
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { Switchmap2Component } from './observable/switchmap2/switchmap2.component';
 import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.compon
     ConcatMap2Component,
     SwitchmapComponent,
     Switchmap2Component,
-    ExhaustMapComponent
+    ExhaustMapComponent,
+    ShareReplayComponent
   ],
   imports: [
     BrowserModule,
