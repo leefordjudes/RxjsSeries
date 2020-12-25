@@ -108,7 +108,7 @@
      "price": 5500,
      "type": "mobile",
      "description":"lorem ipsum",
-     "imgUrl":"https://placeimg.com/400/250/any"
+     "imgUrl":"https://placeimg.com/400/250/any/1"
    },
    {
     "id": 2,
@@ -116,15 +116,23 @@
     "price": 15000,
     "type": "laptop",
     "description":"lorem ipsum",
-    "imgUrl":"https://placeimg.com/400/250/any"
+    "imgUrl":"https://placeimg.com/400/250/any/2"
   },
   {
     "id": 3,
-    "name": "Desktop",
+    "name": "Mobile",
     "price": 25000,
-    "type": "desktop",
+    "type": "mobile",
     "description":"lorem ipsum",
-    "imgUrl":"https://placeimg.com/400/250/any"
+    "imgUrl":"https://placeimg.com/400/250/any/3"
+  },
+  {
+    "id": 4,
+    "name": "Laptop",
+    "price": 1000,
+    "type": "laptop",
+    "description":"lorem ipsum",
+    "imgUrl":"https://placeimg.com/400/250/any/4"
   }
  ]
 }
