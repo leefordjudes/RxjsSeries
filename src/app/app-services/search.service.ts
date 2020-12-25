@@ -8,7 +8,8 @@ import { Search } from '../app-interface/search.interface';
 })
 export class SearchService {
 
-  url = "https://my-json-server.typicode.com/Uxtrendz/apis/videoList";
+  // url = "https://my-json-server.typicode.com/Uxtrendz/apis/videoList";
+  url = "https://my-json-server.typicode.com/leefordjudes/rxjsSeries/app-jsondb/videoList";
 
   constructor(private http: HttpClient) { }
 
