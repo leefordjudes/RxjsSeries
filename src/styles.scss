@@ -75,16 +75,20 @@ ul.techList.completed li {
 }
 
 .wrapper {
-  width: 150px;
+  // width: 150px;
   // height: 100px !important;
+  display: flex;
 }
 
 .red {
   background-color: red;
+  padding: 15px;
 }
 .blue {
   background-color: blue;
+  padding: 15px;
 }
 .green {
   background-color: green;
+  padding: 15px;
 }
