@@ -29,6 +29,7 @@ import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { Switchmap2Component } from './observable/switchmap2/switchmap2.component';
 import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -61,6 +62,7 @@ const routes: Routes = [
       {path: 'switchmap2', component: Switchmap2Component},
       {path: 'exhaust-map', component: ExhaustMapComponent},
       {path: 'share-replay', component: ShareReplayComponent},
+      {path: 'zip-forkjoin', component: ZipForkjoinComponent},
     ],
   },
   {path:'async-await',component: AsyncAwaitComponent},
