@@ -78,6 +78,7 @@ ng g c observable/from-event
 
 ng g s app-services/design-utility
 ng g s app-services/search
+ng g s app-services/error
 
 ng g c observable/interval
 ng g c observable/of-from
