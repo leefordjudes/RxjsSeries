@@ -42,6 +42,7 @@ import { Switchmap2Component } from './observable/switchmap2/switchmap2.componen
 import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
 import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
+import { CombineLatestComponent } from './observable/combine-latest/combine-latest.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.com
     Switchmap2Component,
     ExhaustMapComponent,
     ShareReplayComponent,
-    ZipForkjoinComponent
+    ZipForkjoinComponent,
+    CombineLatestComponent
   ],
   imports: [
     BrowserModule,
