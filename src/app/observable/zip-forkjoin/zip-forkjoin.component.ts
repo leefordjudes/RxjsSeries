@@ -9,11 +9,11 @@ import { map, take } from 'rxjs/operators';
 })
 export class ZipForkjoinComponent implements OnInit, AfterViewInit {
 
-  nameSource = ['Anup ', 'Shekhar ', 'Sharma ', 'Uxtrendz ', 'John ', 'Alex ', 'Robert ', 'Sam '];
-  colorSource = ['red ', 'green ', 'blue ', 'yellow ','violet ', 'purple ', 'grey '];
+  nameSource = ['Anup', 'Shekhar', 'Sharma', 'Uxtrendz', 'John', 'Alex', 'Robert', 'Sam'];
+  colorSource = ['red', 'green', 'blue', 'yellow','violet', 'purple', 'grey'];
   
-  @ViewChild('name') name:ElementRef;
-  @ViewChild('color') color:ElementRef;
+  @ViewChild('name', {static: true}) name:ElementRef;
+  @ViewChild('color', {static: true}) color:ElementRef;
 
   constructor() { }
 
@@ -39,7 +39,7 @@ export class ZipForkjoinComponent implements OnInit, AfterViewInit {
 
     // Ex - 02 ForkJoin
 
-    forkJoin(name$, color$).subscribe(([name, color]) =>{
+    forkJoin([name$, color$]).subscribe(([name, color]) =>{
       // console.log(name, color);
       this.createBox(name, color, 'elContainer2');
     });
@@ -48,7 +48,7 @@ export class ZipForkjoinComponent implements OnInit, AfterViewInit {
   createBox(name, color, containerId) {
     let el = document.createElement('div');
     el.innerText = name;
-    el.setAttribute('class', color);
+    el.setAttribute('class', 'item '+color);
     document.getElementById(containerId).appendChild(el);
   }
 
