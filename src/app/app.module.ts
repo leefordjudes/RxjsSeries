@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 import { AppRoutingModule } from './app-routing.module';
-import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { PromiseComponent } from './promise/promise.component';
@@ -40,6 +41,7 @@ import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { Switchmap2Component } from './observable/switchmap2/switchmap2.component';
 import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
 import { ShareReplayComponent } from './observable/share-replay/share-replay.component';
+import { ZipForkjoinComponent } from './observable/zip-forkjoin/zip-forkjoin.component';
 
 
 @NgModule({
@@ -78,7 +80,8 @@ import { ShareReplayComponent } from './observable/share-replay/share-replay.com
     SwitchmapComponent,
     Switchmap2Component,
     ExhaustMapComponent,
-    ShareReplayComponent
+    ShareReplayComponent,
+    ZipForkjoinComponent
   ],
   imports: [
     BrowserModule,

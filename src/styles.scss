@@ -73,3 +73,37 @@ ul.techList.completed li {
   margin: 0 0 0 10px;
   border: 1px solid #989898;
 }
+
+.wrapper {
+  // width: 150px;
+  // height: 100px !important;
+  display: flex;
+}
+
+.item {
+  margin-left: 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.violet {
+  background-color: violet;
+}
+.purple {
+  background-color: purple;
+}
+.grey {
+  background-color: grey;
+}
