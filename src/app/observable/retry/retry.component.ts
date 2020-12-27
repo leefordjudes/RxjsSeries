@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, Subscription, from } from 'rxjs';
-import { map, tap, take, pluck, retry, retryWhen, delay, scan } from 'rxjs/operators';
+import { map, tap, take, pluck, retry, retryWhen, delay, scan, catchError } from 'rxjs/operators';
+import { ErrorService } from '../../app-services/error.service';
 
 interface Person {
   id: string;
@@ -23,7 +24,8 @@ export class RetryComponent implements OnInit {
   person;
   fetching: boolean = false;
   status = 'No Data';
-  constructor(private http: HttpClient) { }
+  error;
+  constructor(private http: HttpClient, private _errService: ErrorService) { }
 
   ngOnInit(): void {
     // this.fetchDetails();
@@ -38,9 +40,9 @@ export class RetryComponent implements OnInit {
     .pipe(
       // retry(4),
       retryWhen(err => err.pipe(
-        delay(3000),
+        delay(1000),
         scan((retryCount) =>{
-          if(retryCount >= 5) {
+          if(retryCount >= 3) {
             throw err;
           }
           retryCount = retryCount + 1;
@@ -49,9 +51,10 @@ export class RetryComponent implements OnInit {
           return retryCount;
         },0)
       )),
+      catchError(this._errService.handleError),
       map((res: any) => res.results[0]),
     ).subscribe((res:any) => {
-      console.log(res);
+      // console.log(res);
       this.person = {
         id: res.id.value || '<not specified>',
         name: res.name.title+'.'+res.name.first+' '+res.name.last,
@@ -66,10 +69,15 @@ export class RetryComponent implements OnInit {
       this.fetching = false;
     },
     (err)=>{
-      console.log(err);
+      // console.log(err);
+      this.error = err;
       this.status = 'Problem in fetching data.';
       this.fetching = false;
     });
+  }
+
+  closeErrorAlert() {
+    this.error = null;
   }
 
 }

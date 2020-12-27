@@ -1,6 +1,12 @@
 <div class="my-3">
   <h2>Retry, RetryWhen, Scan, Delay - Operator</h2>
   <br>
+  <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error : </strong>{{error}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeErrorAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   <button class="btn btn-primary" type="button" (click)="fetchDetails()">
     <span *ngIf="fetching" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
     {{fetching ? ' Fetching...' : 'Fetch Details'}}

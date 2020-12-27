@@ -1,10 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject, ReplaySubject, AsyncSubject } from 'rxjs';
+import { Subject, BehaviorSubject, ReplaySubject, AsyncSubject, Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ErrorService } from './error.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DesignUtilityService {
+
+
 
   private exclusiveSubject = new Subject<boolean>();
   exclusive$ = this.exclusiveSubject.asObservable();
@@ -15,7 +20,7 @@ export class DesignUtilityService {
   videoEmit = new ReplaySubject<string>(3, 2000);
   asyncVideoEmit = new AsyncSubject();
 
-  constructor() {}
+  constructor(private http: HttpClient, private _errService: ErrorService) {}
 
   addElement(val: any, containerId: string) {
     let el:HTMLLIElement = document.createElement('li');
@@ -44,4 +49,12 @@ export class DesignUtilityService {
   setUserName(val: string) {
     this.userNameSubject.next(val);
   }
+
+  url = 'https://test-products-b05fe.firebaseio.com/products.json';
+  // url = "https://my-json-server.typicode.com/leefordjudes/rxjsSeries/app-jsondb/videoList";
+
+  getProducts():Observable<any> {
+    return this.http.get<any>(this.url).pipe(catchError(this._errService.handleError));
+  }
+
 }
